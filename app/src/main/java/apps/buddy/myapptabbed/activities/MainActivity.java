@@ -16,6 +16,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +26,7 @@ import apps.buddy.myapptabbed.fragments.ListFragment;
 
 public class MainActivity extends BaseActivity {
     private DrawerLayout mDrawerLayout;
+    private TextView mUserName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +46,11 @@ public class MainActivity extends BaseActivity {
         if (navigationView != null) {
             setupDrawerContent(navigationView);
         }
+
+        View header = navigationView.inflateHeaderView(R.layout.nav_header);
+        mUserName = (TextView) header.findViewById(R.id.user_name);
+        mUserName.setText("My Username");
+
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
         if (viewPager != null) {
