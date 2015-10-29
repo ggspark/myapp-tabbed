@@ -1,0 +1,5 @@
+<resources>
+    <!--TODO: Change app name -->
+    <string name="app_name">My App</string>
+    <string name="action_settings">Settings</string>
+</resources>
