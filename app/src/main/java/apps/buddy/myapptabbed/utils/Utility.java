@@ -420,7 +420,7 @@ public class Utility {
         List<String> matchingProviders = (locationManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE)).getAllProviders();
 
         for (String provider : matchingProviders) {
-            if (ActivityCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(context, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            if (ActivityCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED || ActivityCompat.checkSelfPermission(context, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
                 Location location = locationManager.getLastKnownLocation(provider);
 
                 if (location != null) {
