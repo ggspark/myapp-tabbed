@@ -4,8 +4,9 @@ android {
     compileSdkVersion 23
     buildToolsVersion "22.0.1"
 
+    //TODO: Change "apps.buddy.myapptabbed" to match your app's package name.
     defaultConfig {
-        applicationId "apps.buddy.mingle"
+        applicationId "apps.buddy.myapptabbed"
         minSdkVersion 16
         targetSdkVersion 23
         versionCode 1
